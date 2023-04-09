@@ -60,6 +60,20 @@
 
 <script>
 
+ document.addEventListener('keydown', (event) => {
+   if (event.key === 'A') {
+      let keya = document.querySelector("div[data-key='KeyA']");
+      keya.classList.add("playing");
+
+      let audio = document.querySelector("audio[data-key='KeyA']");
+      audio.play();
+  
+      setTimeout(() => {
+        keya.classList.remove("playing");
+      }, 100)
+   }
+ })
+
 </script>
 
 
